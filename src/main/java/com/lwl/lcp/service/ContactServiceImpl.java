@@ -28,7 +28,7 @@ public class ContactServiceImpl implements ContactService {
 	@Override
 	public List<Contact> getContacts() {
 		List<Contact> contacts = contactRepo.findAll();
-		log.info("Total contact found for user:{}", contacts.size());
+		log.info("Total contacts found for user:{}", contacts.size());
 		return contacts;
 	}
 
