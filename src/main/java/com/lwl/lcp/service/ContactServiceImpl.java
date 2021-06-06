@@ -16,7 +16,8 @@ import lombok.extern.slf4j.Slf4j;
 public class ContactServiceImpl implements ContactService {
 	@Autowired
 	private ContactRepo contactRepo;
-
+	private List<Contact> list;
+	
 	@Override
 	public Contact addContact(Contact contact) {
 		Assert.notNull(contact, "Contact object can't b null");
@@ -29,6 +30,7 @@ public class ContactServiceImpl implements ContactService {
 	public List<Contact> getContacts() {
 		List<Contact> contacts = contactRepo.findAll();
 		log.info("Total contacts found for user:{}", contacts.size());
+		System.out.println(list);
 		return contacts;
 	}
 

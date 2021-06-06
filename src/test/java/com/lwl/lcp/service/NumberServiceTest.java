@@ -7,33 +7,33 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class NumberServiceTest {
+class NumberServiceTest {
 
 	@Autowired
 	private NumberService numberService;
 	
 	@Test
-	public void biggestFirstElementAsBigTest() {
+	void biggestFirstElementAsBigTest() {
 			int expected = 15;
 			int actual = numberService.biggest(15, 12, 11);
 			assertEquals(expected, actual);
 	}
 	
 	@Test
-	public void biggestThree1ElementAsBigTest() {
+	 void biggestThree1ElementAsBigTest() {
 			int expected = 18;
 			int actual = numberService.biggest(15, 11, 18);
 			assertEquals(expected, actual);
 	}
 
 	@Test
-	public void biggestSecondElementAsBigTest() {
+	 void biggestSecondElementAsBigTest() {
 		int expected = 15;
 		int actual = numberService.biggest(12, 15, 11);
 		assertEquals(expected, actual);
 	}
 	@Test
-	public void biggestThirdElementAsBigTest() {
+	 void biggestThirdElementAsBigTest() {
 		int expected = 15;
 		int actual = numberService.biggest(11, 12, 15);
 		assertEquals(expected, actual);
